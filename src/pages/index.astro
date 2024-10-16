@@ -1,35 +1,36 @@
 ---
 import Page from "../components/Page.astro";
-import NavItem from '../components/NavItem.astro';
+import NavItem from "../components/NavItem.astro";
+import Carousel from "../components/Carousel.astro";
 ---
-
-
 <Page title="Owen's Portfolio">
-<div>
-  <h1>
-    Owen's Portfolio
-  </h1>
-  <h2>Project Menu</h2>
-  <nav>
-  <ul>
-    <NavItem
-      title="Binary Search Project"
-      link="/projects/binary-search/"
-      imageSrc="/images/binary-search.png"
-      blurb="Learn about the binary search algorithm and its implementation."
-    />
+  <div>
+    <h1>Owen's Portfolio</h1>
+    <h2>Project Menu</h2>
+    <div>
+      <Carousel>
+      <nav>
+      <NavItem
+        title="Binary Search Project"
+        link="/projects/binary-search/"
+        imageSrc="/images/binary-search.png"
+        blurb="Learn about the binary search algorithm and its implementation."
+      />
+      </nav>
+      <nav>
+      <NavItem
+        title="APCSP Portfolio"
+        link="/projects/APCSP-Portfolio/"
+        imageSrc="/images/portfolio.png"
+        blurb="A showcase of all my AP Computer Science Principles projects."
+      />
 
-    <NavItem
-      title="APCSP Portfolio"
-      link="/projects/portfolio/"
-      imageSrc="/images/portfolio.png"
-      blurb="A showcase of all my AP Computer Science Principles projects."
-    />
-
-    <!-- Add more projects here in the future -->
-  </ul>
-</nav>
+      <!-- Add more projects here in the future -->
+      </nav>
+    </Carousel>
+      
+    </div>
+  </div>
   <h2>About Me</h2>
   <p>All About me...</p>
-  </div>
 </Page>

@@ -1,0 +1,52 @@
+---
+import "glider-js/glider.min.css";
+---
+
+<script>
+  import Glider from "glider-js";
+
+  new Glider(document.querySelector(".glider"), {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    dots: ".dots",
+    arrows: {
+      prev: ".glider-prev",
+      next: ".glider-next",
+    },
+  });
+</script>
+<section class="glider-contain">
+  <div class="glider">
+    <slot />
+  </div>
+  <button class="glider-prev">«</button>
+  <button class="glider-next">»</button>
+</section>
+<style>
+  .glider-contain {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #494949;
+  }
+  .glider {
+    display: flex;
+  }
+  .glider > div {
+    min-width: 100%; /* Each slide takes full width */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  .glider-prev,
+  .glider-next {
+    color: #ffffff;
+  }
+  .glider-next.disabled,
+  .glider-prev.disabled {
+    opacity: 0.50;
+    color: #ffffff;
+    cursor: default;
+  }
+</style>
