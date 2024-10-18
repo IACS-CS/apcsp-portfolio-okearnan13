@@ -3,35 +3,38 @@ import Page from "../components/Page.astro";
 import NavItem from "../components/NavItem.astro";
 import Carousel from "../components/Carousel.astro";
 ---
+
 <Page title="Owen's Portfolio">
   <div>
     <h1>Owen's Portfolio</h1>
     <h2>Project Menu</h2>
     <div class="slide">
       <Carousel>
-      <nav>
-      <NavItem
-        title="Binary Search Project"
-        link="/projects/binary-search/"
-        imageSrc="/images/binary-search.png"
-        blurb="Learn about the binary search algorithm and its implementation."
-      />
-      </nav>
-      <nav>
-      <NavItem
-        title="APCSP Portfolio"
-        link="/projects/APCSP-Portfolio/"
-        imageSrc="/images/portfolio.png"
-        blurb="A showcase of all my AP Computer Science Principles projects."
-      />
+        <nav>
+          <NavItem
+            title="Binary Search Project"
+            link="/projects/binary-search/"
+            imageSrc="/images/binary-search.png"
+            blurb="Learn about the binary search algorithm and its implementation."
+          />
+        </nav>
+        <nav>
+          <NavItem
+            title="APCSP Portfolio"
+            link="/projects/APCSP-Portfolio/"
+            imageSrc="/images/portfolio.png"
+            blurb="A showcase of all my AP Computer Science Principles projects."
+          />
 
-      <!-- Add more projects here in the future -->
-      </nav>
-    </Carousel>
-      
+          <!-- Add more projects here in the future -->
+        </nav>
+      </Carousel>
     </div>
   </div>
   <h2>About Me</h2>
-  <p>My name is Owen Kearnan<br><br> Im 17 years old <br><br>
-     I am a highschool senior at Innovation Academy<br><br>My birthday is June 13, 2007 </p>
+  <p class="aboutMe">
+    My name is Owen Kearnan<br /><br /> Im 17 years old <br /><br />
+    I am a highschool senior at Innovation Academy<br /><br />My birthday is
+    June 13, 2007
+  </p>
 </Page>
